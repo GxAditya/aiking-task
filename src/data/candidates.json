@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "John Smith",
+    "email": "john.smith@email.com",
+    "skills": ["JavaScript", "React", "Node.js", "TypeScript", "MongoDB"],
+    "yearsOfExperience": 5,
+    "location": "New York",
+    "salaryExpectation": 95000,
+    "resumeText": "Experienced full-stack developer with 5 years of experience building web applications using React and Node.js. Proficient in TypeScript and MongoDB. Led multiple projects from conception to deployment."
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "email": "sarah.j@email.com",
+    "skills": ["Python", "Django", "React", "PostgreSQL", "AWS"],
+    "yearsOfExperience": 3,
+    "location": "San Francisco",
+    "salaryExpectation": 110000,
+    "resumeText": "Software engineer specializing in Python and Django backend development. Experience with React frontend and cloud deployment on AWS. Strong problem-solving skills."
+  },
+  {
+    "id": 3,
+    "name": "Mike Chen",
+    "email": "mike.chen@email.com",
+    "skills": ["Java", "Spring Boot", "React", "MySQL", "Docker"],
+    "yearsOfExperience": 7,
+    "location": "Austin",
+    "salaryExpectation": 130000,
+    "resumeText": "Senior software developer with 7 years of experience in enterprise Java applications. Expert in Spring Boot microservices architecture. Experience with containerization using Docker."
+  },
+  {
+    "id": 4,
+    "name": "Emily Davis",
+    "email": "emily.d@email.com",
+    "skills": ["JavaScript", "React", "Vue.js", "CSS", "Figma"],
+    "yearsOfExperience": 2,
+    "location": "New York",
+    "salaryExpectation": 70000,
+    "resumeText": "Frontend developer passionate about creating beautiful user interfaces. Skilled in React and Vue.js with strong CSS abilities. Collaborated with design teams using Figma."
+  },
+  {
+    "id": 5,
+    "name": "David Wilson",
+    "email": "david.w@email.com",
+    "skills": ["Python", "Machine Learning", "TensorFlow", "SQL", "JavaScript"],
+    "yearsOfExperience": 4,
+    "location": "Seattle",
+    "salaryExpectation": 120000,
+    "resumeText": "Data scientist and ML engineer with experience building machine learning models using TensorFlow. Strong Python programming skills and SQL database experience."
+  },
+  {
+    "id": 6,
+    "name": "Lisa Anderson",
+    "email": "lisa.a@email.com",
+    "skills": ["React", "TypeScript", "Node.js", "GraphQL", "AWS"],
+    "yearsOfExperience": 6,
+    "location": "Chicago",
+    "salaryExpectation": 115000,
+    "resumeText": "Full-stack developer specializing in modern JavaScript ecosystem. Expert in React with TypeScript, Node.js backends, and GraphQL APIs. AWS certified."
+  },
+  {
+    "id": 7,
+    "name": "James Brown",
+    "email": "james.b@email.com",
+    "skills": ["JavaScript", "React", "Redux", "Node.js", "MongoDB"],
+    "yearsOfExperience": 3,
+    "location": "Remote",
+    "salaryExpectation": 85000,
+    "resumeText": "Web developer focused on MERN stack development. Experience with React state management using Redux. Built several e-commerce and SaaS applications."
+  },
+  {
+    "id": 8,
+    "name": "Anna Martinez",
+    "email": "anna.m@email.com",
+    "skills": ["PHP", "Laravel", "MySQL", "JavaScript", "Vue.js"],
+    "yearsOfExperience": 5,
+    "location": "Miami",
+    "salaryExpectation": 90000,
+    "resumeText": "Backend developer with expertise in PHP and Laravel framework. Strong database design skills with MySQL. Frontend experience with Vue.js."
+  },
+  {
+    "id": 9,
+    "name": "Robert Taylor",
+    "email": "robert.t@email.com",
+    "skills": ["Go", "Kubernetes", "Docker", "AWS", "Python"],
+    "yearsOfExperience": 8,
+    "location": "San Francisco",
+    "salaryExpectation": 160000,
+    "resumeText": "DevOps engineer and backend developer with expertise in Go and cloud infrastructure. Experience managing Kubernetes clusters and CI/CD pipelines."
+  },
+  {
+    "id": 10,
+    "name": "Jennifer White",
+    "email": "jennifer.w@email.com",
+    "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    "yearsOfExperience": 4,
+    "location": "Austin",
+    "salaryExpectation": 100000,
+    "resumeText": "Frontend specialist with deep experience in React and Next.js. Passionate about modern web development practices and clean code. TypeScript advocate."
+  }
+]
