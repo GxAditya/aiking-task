@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Candidate Filtering and Ranking System
+
+A web application that helps recruiters identify the best-fit candidates based on job descriptions and custom filters. Built with Next.js and React.
+
+## Features
+
+- Job description parsing to extract required skills, preferred skills, experience, location, and salary range
+- Custom recruiter filters for skills, experience, location, and salary budget
+- Candidate scoring and ranking based on skill match and experience fit
+- REST API endpoint for filtering and ranking candidates
+
+## Tech Stack
+
+- Frontend: React with TypeScript
+- Backend: Next.js API Routes
+- Styling: Tailwind CSS
+
+## Project Structure
+
+```
+src/
+  app/
+    api/
+      filter-candidates/
+        route.ts          # POST API endpoint
+    page.tsx              # Main page
+    layout.tsx
+    globals.css
+  components/
+    JobDescriptionInput.tsx
+    ExtractedRequirements.tsx
+    RecruiterFilters.tsx
+    CandidateCard.tsx
+    CandidateResults.tsx
+  data/
+    candidates.json       # Sample candidate data
+  types/
+    index.ts              # TypeScript interfaces
+  utils/
+    filterAndScore.ts     # Filtering and scoring logic
+    parseJobDescription.ts # Job description parser
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18 or higher
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Reference
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### POST /api/filter-candidates
 
-## Learn More
+Filters and ranks candidates based on job requirements and recruiter filters.
 
-To learn more about Next.js, take a look at the following resources:
+Request body:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```json
+{
+  "jobDescription": "string",
+  "jobRequirements": {
+    "requiredSkills": ["string"],
+    "preferredSkills": ["string"],
+    "minExperience": "number",
+    "location": "string",
+    "salaryRange": { "min": "number", "max": "number" }
+  },
+  "recruiterFilters": {
+    "selectedSkills": ["string"],
+    "minExperience": "number",
+    "selectedLocations": ["string"],
+    "maxSalary": "number"
+  },
+  "candidates": []
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Response:
 
-## Deploy on Vercel
+```json
+{
+  "rankedCandidates": [],
+  "totalCandidates": "number",
+  "filteredOut": "number"
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scoring Logic
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Candidates are scored on a scale of 0 to 1 based on:
+
+- Required skill match: 50% weight
+- Preferred skill match: 25% weight
+- Experience match: 25% weight
+
+Hard filters are applied first to remove candidates who do not meet minimum experience, location, or salary requirements.
